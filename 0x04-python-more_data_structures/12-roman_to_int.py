@@ -7,7 +7,7 @@ def roman_to_int(roman_string):
             'MM': 2000,
             'M': 1000,
             'DCCC': 800,
-            'DCC': 700
+            'DCC': 700,
             'DC': 600,
             'CCC': 300,
             'CC': 200,
@@ -16,7 +16,7 @@ def roman_to_int(roman_string):
             'CM': 900,
             'LXXX': 80,
             'LXX': 70,
-            'LX': 60
+            'LX': 60,
             'XXX': 30,
             'XX': 20,
             'XL': 40,
@@ -34,11 +34,11 @@ def roman_to_int(roman_string):
             'X': 10,
             'I': 1,
 
+
         }
         result = 0
         for key in r_nums.keys():
             if key in roman_string:
                 result += r_nums[key]
                 roman_string = roman_string.replace(key, '')
-
         return result
