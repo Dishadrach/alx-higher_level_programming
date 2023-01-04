@@ -1,3 +1,4 @@
+
 #!/usr/bin/python3
 """
 Describes a function to adding two
@@ -7,6 +8,7 @@ integers
 
 def add_integer(a, b=98):
     """Take the arguments to add.
+
     a: One of the numbers, default not
 defined.
     b: The other number, default 98.
