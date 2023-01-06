@@ -16,24 +16,24 @@ pos = None
 
 
 def get_input():
-    '''Retrieves and validates this program's argument.
-    Returns:
-        int: The size of the chessboard.
-    '''
-    global n
-    n = 0
-    if len(sys.argv) != 2:
-        print('Usage: nqueens N')
-        sys.exit(1)
-    try:
-        n = int(sys.argv[1])
-    except Exception:
-        print('N must be a number')
-        sys.exit(1)
-    if n < 4:
-        print('N must be at least 4')
-        sys.exit(1)
-    return n
+        '''Retrieves and validates this program's argument.
+        Returns:
+            int: The size of the chessboard.
+        '''
+        global n
+        n = 0
+        if len(sys.argv) != 2:
+            print('Usage: nqueens N')
+            sys.exit(1)
+        try:
+            n = int(sys.argv[1])
+        except Exception:
+            print('N must be a number')
+            sys.exit(1)
+        if n < 4:
+            print('N must be at least 4')
+            sys.exit(1)
+        return n
 
 
 def is_attacking(pos0, pos1):
@@ -72,7 +72,7 @@ def build_solution(row, group):
     '''Builds a solution for the n queens problem.
     Args:
         row (int): The current row in the chessboard.
-            group (list of lists of integers): The group of valid positions.
+        group (list of lists of integers): The group of valid positions.
     '''
     global solutions
     global n
@@ -85,6 +85,7 @@ def build_solution(row, group):
             a = (row * n) + col
             matches = zip(list([pos[a]]) * len(group), group)
             used_positions = map(lambda x: is_attacking(x[0], x[1]), matches)
+            
 group.append(pos[a].copy())
     if not any(used_positions):
         build_solution(row + 1, group)
@@ -92,7 +93,7 @@ group.append(pos[a].copy())
 
 
 def get_solutions():
-    '''Gets the solutions for the given chessboard size.
+    '''Gets the solutions for the given chessboard size
     '''
     global pos, n
     pos = list(map(lambda x: [x // n, x % n], range(n ** 2)))
