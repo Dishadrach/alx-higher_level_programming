@@ -4,9 +4,9 @@
 
 
 class Rectangle:
-        """Represents a 2D Polygon with 4 perpendicular sides.
-        """
-    def __init__(self, width=0, height=0)
+    """Represents a 2D Polygon with 4 perpendicular sides.
+    """
+    def __init__(self, width=0, height=0):
         """Initializes a Rectangle with a given width and height.
         Args:
             width (int): The width of the rectangle.
@@ -17,8 +17,7 @@ class Rectangle:
 
     @property
     def width(self):
-        """Retrieves the width of this Rectangle.
-        Returns:
+        """Retrieves the width of this Rectangle.                Returns:
             int: The width of this Rectangle.
         """
         return self.__width
@@ -30,7 +29,7 @@ class Rectangle:
             int: The height of this Rectangle.
         """
         return self.__height
-    
+
     @width.setter
     def width(self, value):
         """Updates the width of this Rectangle.
@@ -73,4 +72,3 @@ class Rectangle:
             return 0
         else:
             return 2 * (self.width + self.height)
-
