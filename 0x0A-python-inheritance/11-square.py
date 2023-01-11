@@ -1,3 +1,4 @@
+
 #!/usr/bin/python3
 """
 Class Square based in the last task
